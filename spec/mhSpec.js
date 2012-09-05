@@ -33,4 +33,9 @@ describe("Simple functions to build HTML strings", function(){
     expect(mh.paired("div", "contents", [mh.nv("class","foo"),mh.nv("id","thing")]))
       .toEqual('<div class="foo" id="thing">contents</div>');
   });
+
+  it("paired with class and id options", function(){
+    expect(mh.paired("div", "contents", [mh.cl("foo"),mh.id("thing")]))
+      .toEqual('<div class="foo" id="thing">contents</div>');
+  });
 });

@@ -3,6 +3,7 @@
 //  Simple functions to ease construction of HTML strings
 
 var mh = {
+
 // single : a tag with no contents, includes its own terminator and options
 
 // tag      :  HTML tag
@@ -43,5 +44,21 @@ var mh = {
 
   nv : function(name, value) {
     return {name: name, value: value};
+  },
+
+// a convenience function to create an class options object
+
+// value  : class name
+  cl : function(value) {
+    return {name: 'class', value: value};
+  },
+
+  // a convenience function to create an id options object
+
+// value  : id name
+  id : function(value) {
+    return {name: 'id', value: value};
   }
+
+
 };
